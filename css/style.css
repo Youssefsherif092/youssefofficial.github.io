@@ -27,14 +27,20 @@ input.form-control:focus, textarea.form-control:focus{
   position: relative !important;
 }
 
-.navbar .active::after{
+.navbar li a::after{
   content: "";
-  position: absolute;
-  width: 80%;
+  width: 0;
   height: 2px;
-  background-color: rgb(0, 0, 0);
-  bottom:9px;
-  left: 8px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.navbar .active::after{
+  width: 100%;
 }
 
 /* End Nav */
@@ -480,7 +486,7 @@ input.form-control:focus, textarea.form-control:focus{
 }
 
 .img-card:hover .card-img-top{
-  transform: scale(1.5,1.5);
+  transform: scale(1.25,1.25);
 }
 
 
